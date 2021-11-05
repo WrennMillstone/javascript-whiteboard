@@ -8,7 +8,7 @@ function makeButtonFancy()
     {
         this.style.backgroundColor = 'purple';
         this.style.padding = '20px 20px';
-        this.style.border = '5px dashed gold';
+        this.style.border = '5px solid gold';
         this.style.borderRadius = '100px';
         this.style.color = 'gold';
         this.innerHTML = 'Oh no, go back!';
