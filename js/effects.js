@@ -1,3 +1,4 @@
+//boring button
 const fancyButton = document.querySelector(".fancyButton");
 let fancyBool = false;
 
@@ -35,3 +36,11 @@ function makeButtonFancy()
 }
 
 fancyButton.addEventListener('click', makeButtonFancy);
+
+//collapsing box
+const infoBox = document.getElementById('infoBox');
+const infoButton = document.querySelector('.infoButton');
+const closeInfo = document.querySelector('.closeInfo');
+
+infoButton.addEventListener('click', function(){infoBox.style.display = 'flex'})
+closeInfo.addEventListener('click', function(){infoBox.style.display = 'none'})

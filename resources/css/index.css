@@ -15,8 +15,10 @@ main section{
     flex-direction: column;
 }
 
+/*info box*/
+
 #infoBox{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     position: fixed;
