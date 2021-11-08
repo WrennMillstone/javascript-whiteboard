@@ -38,9 +38,30 @@ function makeButtonFancy()
 fancyButton.addEventListener('click', makeButtonFancy);
 
 //collapsing box
-const infoBox = document.getElementById('infoBox');
-const infoButton = document.querySelector('.infoButton');
-const closeInfo = document.querySelector('.closeInfo');
+const openBoxButtons = document.querySelectorAll('[data-modal-target]')
+const closeBoxButtons = document.querySelectorAll('[data-close-button]')
 
-infoButton.addEventListener('click', function(){infoBox.style.display = 'flex'})
-closeInfo.addEventListener('click', function(){infoBox.style.display = 'none'})
+openBoxButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const box = document.querySelector(button.dataset.modalTarget)
+        openBox(box)
+    })
+})
+
+closeBoxButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const box = button.closest('.infoBox')
+        closeBox(box)
+    })
+})
+
+function openBox(box)
+{
+    if (box == null) return
+    box.classList.add('active')
+}
+function closeBox(box)
+{
+    if (box == null) return
+    box.classList.remove('active')
+}
